@@ -29,10 +29,13 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Install ML dependencies
-        run: pip install -r req.txt
+        run: pip install -r requirements.txt
 
       - name: Train student result model
-        run: python trainmodel.py
+        run: python train_model.py
+
+      - name: Check ML quality gate
+        run: python quality_gate.py
 
       - name: Run automated ML tests
         run: python -m unittest discover -v
