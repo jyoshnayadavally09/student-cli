@@ -32,7 +32,7 @@ jobs:
         run: pip install -r req.txt
 
       - name: Train student result model
-        run: python train_model.py
+        run: python trainmodel.py
 
       - name: Run automated ML tests
         run: python -m unittest discover -v
